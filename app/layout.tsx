@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "@/assets/styles/globals.css"
 import { APP_DESCRIPTION, APP_NAME } from "@/lib/constants";
+import { ThemeProvider } from "next-themes";
+import { useEffect, useState } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,12 +21,27 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if(!mounted) return null;
+  
   return (
     <html lang="en" suppressHydrationWarning>
+      
       <body
         className={`${inter.className} antialiased`}
       >
+        <ThemeProvider 
+        attribute='class'
+        defaultTheme='system'
+        enableSystem
+        disableTransitionOnChange
+      >
         {children}
+        </ThemeProvider>
       </body>
     </html>
   );
