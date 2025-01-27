@@ -1,16 +1,14 @@
-import { Button } from "@/components/ui/button"
 import { APP_NAME } from "@/lib/constants"
-import { ShoppingCart, UserIcon, UserPlus } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
-import ModeToggle from "./mode-toggle"
+import NavMenu from "./nav-menu"
 
 const Header = () => {
   return (
     <header className="w-full shadow-lg">
-      <div className="wrapper flex-between">
-        <div className="flex-start">
-          <Link href="/" className="flex-start">
+      <div className="wrapper flex justify-between items-center mx-auto">
+        <div className="">
+          <Link href="/" className="flex items-center gap-2">
             <Image 
               priority={true}
               src="/images/logo.svg"
@@ -18,32 +16,12 @@ const Header = () => {
               height={75}
               alt={`${APP_NAME} logo`}
             />
-            <span className="hidden lg:block font-bold text-2xl ml-3">
+            <span className="hidden lg:block font-bold text-2xl ml-2">
               {APP_NAME}
             </span>
           </Link>
         </div>
-        <div className="space-x-2">
-          <ModeToggle />
-          <Button asChild variant='ghost'>
-            <Link href='/cart'>
-              <ShoppingCart />
-              Cart
-            </Link>
-          </Button>
-          <Button asChild>
-            <Link href='/sign-in'>
-              <UserIcon />
-              Sign In
-            </Link>
-          </Button>
-          <Button asChild variant='secondary'>
-            <Link href='/sign-up'>
-              <UserPlus />
-              Sign Up
-            </Link>
-          </Button>
-        </div>
+        <NavMenu />
       </div>
     </header>
   )
