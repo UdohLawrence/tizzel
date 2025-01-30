@@ -19,6 +19,24 @@ const sampleData = {
       banner: ""
     },
     {
+      name: 'Brooks Brothers Long Sleeved Shirt',
+      slug: 'brooks-brothers-long-sleeved-shirt',
+      category: 'Clothing',
+      subCategory: "Men's Dress Shirts",
+      description: 'Timeless style and premium comfort',
+      images: [
+        '/images/samples/p2-1.jpg',
+        '/images/samples/p2-2.jpg',
+      ],
+      price: 85.9,
+      brand: 'Brooks Brothers',
+      rating: 4.2,
+      numReviews: 8,
+      stock: 10,
+      isFeatured: true,
+      banner: 'banner-2.jpg',
+    },
+    {
       name: "High Fidelity Headphones",
       slug: "high-fidelity-headphones",
       description: "Listen to your music with noise cancelling effects",
