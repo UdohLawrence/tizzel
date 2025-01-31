@@ -7,8 +7,8 @@ const sampleData = {
       category: "Electronics",
       subCategory: "Cameras",
       images: [
-        "images/samples/camera1.jpg",
-        "images/samples/camera2.jpg"
+        "/images/samples/camera1.jpg",
+        "/images/samples/camera2.jpg"
       ],
       price: 35.67,
       brand: "Nikon",
@@ -19,8 +19,8 @@ const sampleData = {
       banner: ""
     },
     {
-      name: 'Brooks Brothers Long Sleeved Shirt',
-      slug: 'brooks-brothers-long-sleeved-shirt',
+      name: 'Long Sleeved Shirt',
+      slug: 'long-sleeved-shirt',
       category: 'Clothing',
       subCategory: "Men's Dress Shirts",
       description: 'Timeless style and premium comfort',
@@ -34,7 +34,7 @@ const sampleData = {
       numReviews: 8,
       stock: 10,
       isFeatured: true,
-      banner: 'banner-2.jpg',
+      banner: '',
     },
     {
       name: "High Fidelity Headphones",
@@ -43,8 +43,8 @@ const sampleData = {
       category: "Electronics",
       subCategory: "Headphones",
       images: [
-        "images/samples/headphone1.jpg",
-        "images/samples/headphone2.jpg"
+        "/images/samples/headphone1.jpg",
+        "/images/samples/headphone2.jpg"
       ],
       price: 15.23,
       brand: "Behringer",
@@ -61,8 +61,8 @@ const sampleData = {
       category: "Electronics",
       subCategory: "Home Theater",
       images: [
-        "images/samples/homeTheater1.jpg",
-        "images/samples/homeTheater2.jpg"
+        "/images/samples/homeTheater1.jpg",
+        "/images/samples/homeTheater2.jpg"
       ],
       price: 55.97,
       brand: "LG",
@@ -79,8 +79,8 @@ const sampleData = {
       category: "Electronics",
       subCategory: "Mobile Phones",
       images: [
-        "images/samples/iPhone1.jpg",
-        "images/samples/iPhone2.jpg"
+        "/images/samples/iPhone1.jpg",
+        "/images/samples/iPhone2.jpg"
       ],
       price: 15.23,
       brand: "Apple",
@@ -97,10 +97,10 @@ const sampleData = {
       category: "Electronics",
       subCategory: "Laptop/Computers",
       images: [
-        "images/samples/laptop1.jpg",
-        "images/samples/laptop2.jpg",
-        "images/samples/laptop3.jpg",
-        "images/samples/laptop4.jpg"
+        "/images/samples/laptop1.jpg",
+        "/images/samples/laptop2.jpg",
+        "/images/samples/laptop3.jpg",
+        "/images/samples/laptop4.jpg"
       ],
       price: 15.23,
       brand: "Apple MacBook",
@@ -117,8 +117,8 @@ const sampleData = {
       category: "Electronics",
       subCategory: "Tablets",
       images: [
-        "images/samples/tablet1.jpg",
-        "images/samples/tablet2.jpg"
+        "/images/samples/tablet1.jpg",
+        "/images/samples/tablet2.jpg"
       ],
       price: 15.23,
       brand: "Android",
@@ -135,8 +135,8 @@ const sampleData = {
       category: "Electronics",
       subCategory: "Television",
       images: [
-        "images/samples/teleevision1.jpg",
-        "images/samples/television2.jpg"
+        "/images/samples/television1.jpg",
+        "/images/samples/television2.jpg"
       ],
       price: 15.23,
       brand: "Hisense",
