@@ -17,6 +17,7 @@ const Loading = () => {
         width={150}
         height={150}
         alt='loading'
+        unoptimized
       />
     </div>    
   )
