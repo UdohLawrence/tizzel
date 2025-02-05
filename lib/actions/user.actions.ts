@@ -22,3 +22,7 @@ export async function signInWithCredentials ( prevState: unknown, formData: Form
     return {success: false, message: 'Invalid email or password'}
   }
 }
+
+export async function signOutUser () {
+  await signOut();
+}
