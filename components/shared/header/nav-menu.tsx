@@ -9,8 +9,10 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { auth } from "@/auth";
 
-const NavMenu = () => {
+const NavMenu = async () => {
+  const session = await auth();
   return (
     <>
       {/* Mobile NavMenu */}
@@ -28,18 +30,23 @@ const NavMenu = () => {
                 Cart
               </Link>
             </Button>
-            <Button asChild>
-              <Link href="/sign-in">
-                <UserIcon />
-                Sign In
-              </Link>
-            </Button>
-            <Button asChild variant="secondary">
-              <Link href="/sign-up">
-                <UserPlus />
-                Sign Up
-              </Link>
-            </Button>
+            {!session && (
+              <>
+                <Button asChild>
+                  <Link href="/sign-in">
+                    <UserIcon />
+                    Sign In
+                  </Link>
+                </Button>
+                <Button asChild variant="secondary">
+                  <Link href="/sign-up">
+                    <UserPlus />
+                    Sign Up
+                  </Link>
+                </Button>
+              </>
+            )}
+
             <SheetDescription></SheetDescription>
           </SheetContent>
         </Sheet>
@@ -52,18 +59,22 @@ const NavMenu = () => {
             Cart
           </Link>
         </Button>
-        <Button asChild>
-          <Link href="/sign-in">
-            <UserIcon />
-            Sign In
-          </Link>
-        </Button>
-        <Button asChild variant="secondary">
-          <Link href="/sign-up">
-            <UserPlus />
-            Sign Up
-          </Link>
-        </Button>
+        {!session && (
+          <>
+            <Button asChild>
+              <Link href="/sign-in">
+                <UserIcon />
+                Sign In
+              </Link>
+            </Button>
+            <Button asChild variant="secondary">
+              <Link href="/sign-up">
+                <UserPlus />
+                Sign Up
+              </Link>
+            </Button>
+          </>
+        )}
       </nav>
     </>
   );
