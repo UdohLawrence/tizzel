@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import ModeToggle from "./mode-toggle";
 import Link from "next/link";
-import { Menu, ShoppingCart, UserIcon, UserPlus } from "lucide-react";
+import { Menu, ShoppingCart } from "lucide-react";
 import {
   Sheet,
   SheetContent,
@@ -9,10 +9,9 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { auth } from "@/auth";
+import UserButton from "./user-button";
 
 const NavMenu = async () => {
-  const session = await auth();
   return (
     <>
       {/* Mobile NavMenu */}
@@ -30,23 +29,7 @@ const NavMenu = async () => {
                 Cart
               </Link>
             </Button>
-            {!session && (
-              <>
-                <Button asChild>
-                  <Link href="/sign-in">
-                    <UserIcon />
-                    Sign In
-                  </Link>
-                </Button>
-                <Button asChild variant="secondary">
-                  <Link href="/sign-up">
-                    <UserPlus />
-                    Sign Up
-                  </Link>
-                </Button>
-              </>
-            )}
-
+            <UserButton />
             <SheetDescription></SheetDescription>
           </SheetContent>
         </Sheet>
@@ -59,22 +42,7 @@ const NavMenu = async () => {
             Cart
           </Link>
         </Button>
-        {!session && (
-          <>
-            <Button asChild>
-              <Link href="/sign-in">
-                <UserIcon />
-                Sign In
-              </Link>
-            </Button>
-            <Button asChild variant="secondary">
-              <Link href="/sign-up">
-                <UserPlus />
-                Sign Up
-              </Link>
-            </Button>
-          </>
-        )}
+        <UserButton />
       </nav>
     </>
   );
