@@ -21,3 +21,7 @@ export const insertProductSchema = z.object({
   banner: z.string().nullable(),
   price: currency
 });
+
+export const cartItemSchema = z.object({
+  productId: z.string().min(1, 'Product is required')
+})
